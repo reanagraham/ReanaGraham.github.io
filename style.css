@@ -1,9 +1,9 @@
 /* Color Palette & Global Variables */
 :root {
-    --bg-light: #fdfbfd;        /* Clean base background behind your main content container */
+    --bg-light: #FFD6ED;        /* Clean base background behind your main content container */
     --pastel-pink: #FFD6ED;     /* Your new pastel pink */
     --pastel-green: #D4EBB9;    /* Your new light green */
-    --pure-white: #ffffff;      /* Bright white for cards, text readability, and borders */
+    --pure-white: #D0F0C0;      /* Bright white for cards, text readability, and borders */
     --dark-black: #1a1a1a;      /* Sharp off-black for easily readable body text */
     --card-bg: #ffffff;         /* Background color for your educational/work cards */
 }
