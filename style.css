@@ -164,7 +164,7 @@ h2 {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.8rem;
+    gap: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -173,25 +173,32 @@ h2 {
     border: 3px solid var(--dark-black);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.05);
+    transform-origin: center center;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
     position: relative;
     z-index: 1;
 }
 
-/* THE HOVER EFFECT: Makes the photo cards grow bigger and pop out smoothly */
+/* THE HOVER ZOOM EFFECT: Enlarges dramatically for detailed up-close viewing */
 .gallery-item:hover {
-    transform: scale(1.12) rotate(1.5deg); 
-    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.12); 
-    z-index: 10; 
+    transform: scale(1.45); 
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.18); 
+    z-index: 999; 
 }
 
+/* Photography Images Layout */
 .gallery-item img {
     width: 100%;
-    height: 280px; 
+    height: 300px; 
     object-fit: cover;
     display: block;
     border-bottom: 3px solid var(--dark-black);
+}
+
+/* DIGITAL ARTWORK SPECIAL SIZING: Custom height to make artwork boxes taller */
+#artwork .gallery-item img {
+    height: 420px; 
 }
 
 .gallery-caption {
