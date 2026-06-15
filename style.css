@@ -1,22 +1,29 @@
+/* Import a fun, retro-cartoon font stack from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@400..700&display=swap');
+
 /* Color Palette & Global Variables */
 :root {
-    --bg-light: #FFD6ED;        /* Clean base background behind your main content container */
-    --pastel-pink: #FFD6ED;     /* Your new pastel pink */
-    --pastel-green: #D4EBB9;    /* Your new light green */
-    --pure-white: #FFFFFF;      /* Bright white for cards, text readability, and borders */
-    --dark-black: #1a1a1a;      /* Sharp off-black for easily readable body text */
-    --card-bg: #ffffff;         /* Background color for your educational/work cards */
+    --bg-light: #FFD6ED;        /* Pastel pink base background */
+    --pastel-pink: #FFD6ED;     /* Main pink */
+    --pastel-green: #D4EBB9;    /* Light green accent */
+    --pure-white: #FFFFFF;      /* Crisp white details */
+    --dark-black: #1a1a1a;      /* Readable text color */
+    
+    /* Swapped from white to a soft, inviting pink tint for cards to blend beautifully */
+    --card-bg: #FFF0FA;         
 }
 
 body {
     /* 1. BACKGROUND PATTERN */
-    /* Put your pattern image in your main folder, name it 'pattern.png', and uncomment the lines below! */
     /* background-image: url('pattern.png'); */
     /* background-repeat: repeat; */
     
-    background-color: var(--bg-light);  /* Fallback color if pattern isn't used */
+    background-color: var(--bg-light);  
     color: var(--dark-black);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    
+    /* Fun, rounded, highly readable body font */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -25,32 +32,39 @@ body {
 /* Header & Navigation */
 header {
     /* 2. HEADER BANNER IMAGE */
-    /* Put your banner image in your main folder, name it 'header-banner.jpg', and uncomment the lines below! */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('header-banner.jpg'); */
+    /* 
+       UNCOMMENT the lines below when your file is ready! 
+       I updated the gradient below to use a soft pink/black tint to integrate your colors better.
+    */
+    /* background-image: linear-gradient(rgba(255, 214, 237, 0.2), rgba(26, 26, 26, 0.6)), url('header-banner.jpg'); */
     /* background-size: cover; */
     /* background-position: center; */
     /* background-repeat: no-repeat; */
     
-    /* Elegant off-black fallback background until you upload your banner photo */
     background-color: var(--dark-black); 
     color: var(--pure-white);
-    padding: 5rem 0; /* Gives your header text and future background photo breathing room */
+    padding: 6rem 0; 
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Guarantees text visibility over photos */
+    /* Bold, bubbly cartoon font */
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0px var(--dark-black), 5px 5px 0px var(--pastel-green); /* Retro "pop" shadow effect */
 }
 
 header p {
-    margin: 0.5rem 0 0 0;
-    font-size: 1.2rem;
+    margin: 0.75rem 0 0 0;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
     letter-spacing: 1px;
-    font-weight: 300;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: var(--pastel-green); /* Brings the green right into the header */
+    text-shadow: 2px 2px 0px var(--dark-black);
 }
 
 /* Page Containers */
@@ -65,11 +79,16 @@ section {
 }
 
 h2 {
-    font-size: 2rem;
-    border-bottom: 4px solid var(--pastel-green); /* Your new light green accent underline */
-    padding-bottom: 0.5rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
     color: var(--dark-black);
-    display: inline-block; /* Keeps the green underline hugging the text size perfectly */
+    display: inline-block;
+    background-color: var(--pastel-green); /* Gives headings a chunky, cartoon-sticker highlight */
+    padding: 0.25rem 1rem;
+    border-radius: 8px;
+    border: 3px solid var(--dark-black); /* Thick comic-style outline */
+    transform: rotate(-1deg); /* Slight retro tilt */
 }
 
 /* Profile Section Styling (About Me) */
@@ -78,10 +97,11 @@ h2 {
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
-    background-color: var(--pastel-pink); /* Your new gorgeous pink background card */
+    background-color: var(--pastel-green); /* Swapped to green for a striking alternate section block */
     padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border-radius: 24px; /* More rounded, playful corners */
+    border: 4px solid var(--dark-black);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
@@ -89,7 +109,7 @@ h2 {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid var(--pure-white); /* Crisp white pop border around your portrait */
+    border: 6px solid var(--pure-white); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -99,26 +119,31 @@ h2 {
 }
 
 .profile-text h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--dark-black);
 }
 
 /* Cards (Education & Experience) */
 .card {
     background-color: var(--card-bg);
-    border-left: 6px solid var(--pastel-pink); /* Soft pink structural sidebar accent */
+    border: 3px solid var(--dark-black); /* Matching structural comic borders */
+    border-left: 12px solid var(--pastel-green); /* Highlighting the pink cards with a chunky green bar */
     padding: 2rem;
     margin-bottom: 2rem;
-    border-radius: 0 16px 16px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
     margin-top: 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--dark-black);
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 3px dashed var(--pastel-green); /* Funky dashed separator */
     padding-bottom: 0.5rem;
 }
 
@@ -131,15 +156,16 @@ h2 {
 
 .gallery-item {
     background-color: var(--card-bg);
-    border-radius: 12px;
+    border: 3px solid var(--dark-black);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px); /* Soft float up effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: scale(1.02) rotate(1deg); /* Playful cartoon pop-out on hover */
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item img {
@@ -147,14 +173,15 @@ h2 {
     height: 280px;
     object-fit: cover;
     display: block;
+    border-bottom: 3px solid var(--dark-black);
 }
 
 .gallery-caption {
     padding: 1rem;
-    font-size: 0.9rem;
+    font-family: 'Fredoka', sans-serif;
     font-weight: 500;
+    font-size: 1rem;
     text-align: center;
-    background-color: var(--pure-white);
+    background-color: var(--card-bg);
     color: var(--dark-black);
-    border-top: 1px solid #f5f5f5;
 }
