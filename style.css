@@ -91,8 +91,9 @@ h2 {
 .profile-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
+    justify-content: center;
     background-color: var(--pastel-green); 
     padding: 2.5rem;
     border-radius: 24px; 
@@ -101,17 +102,24 @@ h2 {
 }
 
 .profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid var(--pure-white); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+/* Gives the new teaching picture a soft square comic look instead of a circle for visual variety */
+.teaching-pic {
+    border-radius: 20px;
 }
 
 .profile-text {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
+    text-align: left;
 }
 
 .profile-text h3 {
