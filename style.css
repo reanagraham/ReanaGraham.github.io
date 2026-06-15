@@ -163,8 +163,8 @@ h2 {
 /* Visual Creative Grids (Artwork & Photography) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
     margin-bottom: 3rem;
 }
 
@@ -174,17 +174,21 @@ h2 {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
+/* THE HOVER EFFECT: Makes the photo cards grow bigger and pop out smoothly */
 .gallery-item:hover {
-    transform: scale(1.03) rotate(1deg); 
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+    transform: scale(1.12) rotate(1.5deg); 
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.12); 
+    z-index: 10; 
 }
 
 .gallery-item img {
     width: 100%;
-    height: 240px;
+    height: 280px; 
     object-fit: cover;
     display: block;
     border-bottom: 3px solid var(--dark-black);
