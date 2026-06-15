@@ -9,19 +9,15 @@
     --pure-white: #FFFFFF;      /* Crisp white details */
     --dark-black: #1a1a1a;      /* Readable text color */
     
-    /* Swapped from white to a soft, inviting pink tint for cards to blend beautifully */
+    /* Soft pink tint for cards to fully integrate your colors */
     --card-bg: #FFF0FA;         
 }
 
 body {
-    /* 1. BACKGROUND PATTERN */
-    /* background-image: url('pattern.png'); */
-    /* background-repeat: repeat; */
-    
     background-color: var(--bg-light);  
     color: var(--dark-black);
     
-    /* Fun, rounded, highly readable body font */
+    /* Playful, rounded typography stack */
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
     line-height: 1.6;
@@ -31,15 +27,11 @@ body {
 
 /* Header & Navigation */
 header {
-    /* 2. HEADER BANNER IMAGE */
-    /* 
-       UNCOMMENT the lines below when your file is ready! 
-       I updated the gradient below to use a soft pink/black tint to integrate your colors better.
-    */
-    /* background-image: linear-gradient(rgba(255, 214, 237, 0.2), rgba(26, 26, 26, 0.6)), url('header-banner.jpg'); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
+    /* ACTIVE HEADER BANNER IMAGE with soft tint overlay */
+    background-image: linear-gradient(rgba(255, 214, 237, 0.2), rgba(26, 26, 26, 0.6)), url('header-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     
     background-color: var(--dark-black); 
     color: var(--pure-white);
@@ -49,12 +41,11 @@ header {
 
 header h1 {
     margin: 0;
-    /* Bold, bubbly cartoon font */
     font-family: 'Fredoka', sans-serif;
     font-weight: 700;
     font-size: 3.5rem;
     letter-spacing: 1px;
-    text-shadow: 3px 3px 0px var(--dark-black), 5px 5px 0px var(--pastel-green); /* Retro "pop" shadow effect */
+    text-shadow: 3px 3px 0px var(--dark-black), 5px 5px 0px var(--pastel-green); /* 3D pop shadow */
 }
 
 header p {
@@ -63,7 +54,7 @@ header p {
     font-weight: 500;
     font-size: 1.4rem;
     letter-spacing: 1px;
-    color: var(--pastel-green); /* Brings the green right into the header */
+    color: var(--pastel-green); 
     text-shadow: 2px 2px 0px var(--dark-black);
 }
 
@@ -84,11 +75,11 @@ h2 {
     font-size: 2.2rem;
     color: var(--dark-black);
     display: inline-block;
-    background-color: var(--pastel-green); /* Gives headings a chunky, cartoon-sticker highlight */
+    background-color: var(--pastel-green); /* Cartoon sticker highlight style */
     padding: 0.25rem 1rem;
     border-radius: 8px;
-    border: 3px solid var(--dark-black); /* Thick comic-style outline */
-    transform: rotate(-1deg); /* Slight retro tilt */
+    border: 3px solid var(--dark-black);   /* Thick comic border */
+    transform: rotate(-1deg);              /* Playful tilt */
 }
 
 /* Profile Section Styling (About Me) */
@@ -97,9 +88,9 @@ h2 {
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
-    background-color: var(--pastel-green); /* Swapped to green for a striking alternate section block */
+    background-color: var(--pastel-green); /* Standout green background block */
     padding: 2.5rem;
-    border-radius: 24px; /* More rounded, playful corners */
+    border-radius: 24px; 
     border: 4px solid var(--dark-black);
     box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
 }
@@ -129,8 +120,8 @@ h2 {
 /* Cards (Education & Experience) */
 .card {
     background-color: var(--card-bg);
-    border: 3px solid var(--dark-black); /* Matching structural comic borders */
-    border-left: 12px solid var(--pastel-green); /* Highlighting the pink cards with a chunky green bar */
+    border: 3px solid var(--dark-black); 
+    border-left: 12px solid var(--pastel-green); /* Side accent pop */
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 16px;
@@ -143,8 +134,26 @@ h2 {
     margin-top: 0;
     font-size: 1.5rem;
     color: var(--dark-black);
-    border-bottom: 3px dashed var(--pastel-green); /* Funky dashed separator */
+    border-bottom: 3px dashed var(--pastel-green); /* Dotted comic separator */
     padding-bottom: 0.5rem;
+}
+
+/* Specific inner lists formatting for lists inside cards */
+.experience-item {
+    margin-bottom: 1.5rem;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-item ul {
+    margin-top: 6px;
+    padding-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 4px;
 }
 
 /* Visual Creative Grids (Artwork & Photography) */
@@ -164,7 +173,7 @@ h2 {
 }
 
 .gallery-item:hover {
-    transform: scale(1.02) rotate(1deg); /* Playful cartoon pop-out on hover */
+    transform: scale(1.02) rotate(1deg); /* Bouncy float up on mouse hover */
     box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
